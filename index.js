@@ -22,13 +22,13 @@ app.get("/", (req, res) => {
       <li>Clone the project or download the source code to your machine.</li>
       <li>Open a terminal and navigate to the project folder.</li>
       <li>Run <code>npm install</code> to install all required dependencies (Express, Mongoose, etc.).</li>
-      <li>Start the server by running <code>node <yourFileName>.js</code> (replace <code><yourFileName></code> with the actual name of this file).</li>
+      <li>Start the server by running <code>npm run dev</code>.</li>
       <li>Use an API testing tool of your choice to test the API:</li>
       <ul>
         <li>
           <strong>Postman</strong>: 
           <ul>
-            <li>To create a product, send a POST request to <code>http://localhost:3000/api/products</code> with a JSON body like:
+            <li>To create a product, send a POST request to <code>https://simple-node-backend-randel.onrender.com/api/products</code> with a JSON body like:
               <pre>
                 {
                   "name": "Laptop",
@@ -38,17 +38,16 @@ app.get("/", (req, res) => {
                 }
               </pre>
             </li>
-            <li>To get all products, send a GET request to <code>http://localhost:3000/api/products</code>.</li>
-            <li>To get a specific product by ID, send a GET request to <code>http://localhost:3000/api/products/:id</code> (replace <code>:id</code> with the actual product ID).</li>
-            <li>To update a product, send a PUT request to <code>http://localhost:3000/api/products/:id</code> with a JSON body of the updated product data.</li>
-            <li>To delete a product, send a DELETE request to <code>http://localhost:3000/api/products/:id</code>.</li>
+            <li>To get all products, send a GET request to <code>https://simple-node-backend-randel.onrender.com/api/products</code>.</li>
+            <li>To get a specific product by ID, send a GET request to <code>https://simple-node-backend-randel.onrender.com/api/products/:id</code> (replace <code>:id</code> with the actual product ID).</li>
+            <li>To update a product, send a PUT request to <code>https://simple-node-backend-randel.onrender.com/api/products/:id</code> with a JSON body of the updated product data.</li>
+            <li>To delete a product, send a DELETE request to <code>https://simple-node-backend-randel.onrender.com/api/products/:id</code>.</li>
           </ul>
         </li>
         <li>
           <strong>Insomnia</strong>: 
           <ul>
-            <li>Similar to Postman, you can create requests by selecting the method (POST, GET, PUT, DELETE) and entering the URL <code>http://localhost:3000/api/products</code>. Enter the JSON body as needed for POST and PUT requests.</li>
-            <li>Insomnia provides a similar interface to Postman for testing your APIs.</li>
+            <li>Similar to Postman, you can create requests by selecting the method (POST, GET, PUT, DELETE) and entering the URL <code>https://simple-node-backend-randel.onrender.com/api/products</code>. Enter the JSON body as needed for POST and PUT requests.</li>
           </ul>
         </li>
         <li>
@@ -56,7 +55,7 @@ app.get("/", (req, res) => {
           <ul>
             <li>To create a product, use:
               <pre>
-                curl -X POST http://localhost:3000/api/products -H "Content-Type: application/json" -d '{
+                curl -X POST https://simple-node-backend-randel.onrender.com/api/products -H "Content-Type: application/json" -d '{
                   "name": "Laptop",
                   "quantity": 5,
                   "price": 999.99,
@@ -66,17 +65,17 @@ app.get("/", (req, res) => {
             </li>
             <li>To get all products, use:
               <pre>
-                curl http://localhost:3000/api/products
+                curl https://simple-node-backend-randel.onrender.com/api/products
               </pre>
             </li>
             <li>To get a specific product by ID, use:
               <pre>
-                curl http://localhost:3000/api/products/:id
+                curl https://simple-node-backend-randel.onrender.com/api/products/:id
               </pre>
             </li>
             <li>To update a product, use:
               <pre>
-                curl -X PUT http://localhost:3000/api/products/:id -H "Content-Type: application/json" -d '{
+                curl -X PUT https://simple-node-backend-randel.onrender.com/api/products/:id -H "Content-Type: application/json" -d '{
                   "name": "Updated Laptop",
                   "quantity": 10,
                   "price": 899.99
@@ -85,7 +84,7 @@ app.get("/", (req, res) => {
             </li>
             <li>To delete a product, use:
               <pre>
-                curl -X DELETE http://localhost:3000/api/products/:id
+                curl -X DELETE https://simple-node-backend-randel.onrender.com/api/products/:id
               </pre>
             </li>
           </ul>
@@ -95,27 +94,27 @@ app.get("/", (req, res) => {
           <ul>
             <li>To create a product, use:
               <pre>
-                http POST http://localhost:3000/api/products name="Laptop" quantity=5 price=999.99 image="https://example.com/laptop.jpg"
+                http POST https://simple-node-backend-randel.onrender.com/api/products name="Laptop" quantity=5 price=999.99 image="https://example.com/laptop.jpg"
               </pre>
             </li>
             <li>To get all products, use:
               <pre>
-                http GET http://localhost:3000/api/products
+                http GET https://simple-node-backend-randel.onrender.com/api/products
               </pre>
             </li>
             <li>To get a specific product by ID, use:
               <pre>
-                http GET http://localhost:3000/api/products/:id
+                http GET https://simple-node-backend-randel.onrender.com/api/products/:id
               </pre>
             </li>
             <li>To update a product, use:
               <pre>
-                http PUT http://localhost:3000/api/products/:id name="Updated Laptop" quantity=10 price=899.99
+                http PUT https://simple-node-backend-randel.onrender.com/api/products/:id name="Updated Laptop" quantity=10 price=899.99
               </pre>
             </li>
             <li>To delete a product, use:
               <pre>
-                http DELETE http://localhost:3000/api/products/:id
+                http DELETE https://simple-node-backend-randel.onrender.com/api/products/:id
               </pre>
             </li>
           </ul>
